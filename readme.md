@@ -1,9 +1,8 @@
 # 此Demo是使用 Flask + bootstrap + PostgreSQL 的註冊登入系統
 ## 環境設置
 1. 安裝相關套件：
-  此Demo是使用python 3.11.9版本，進入此Demo目錄，執行  
+  此Demo是使用python 3.11.9版本，進入此Demo目錄，執行
 <code>
-cd flask_demo  
 python -m venv env  
 source env/bin/activate (Linux/Mac) or .\env\Scripts\activate (Windows)  
 pip install -r requirements.txt  
