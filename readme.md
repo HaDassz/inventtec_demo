@@ -17,8 +17,7 @@ pip install -r requirements.txt</code>
 3. 啟動：<code>
    cd backend  
    flask run  
-</code>
-首頁會在本地http://127.0.0.1:5000/  中呈現
+</code>首頁會在本地http://127.0.0.1:5000/  中呈現
 ## API說明
 1. 創建帳號，POST，'/api/users'
    request json:<code>
