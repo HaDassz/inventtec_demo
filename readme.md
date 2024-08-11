@@ -1,28 +1,26 @@
 # 此Demo是使用 Flask + bootstrap + PostgreSQL 的註冊登入系統
 ## 環境設置
 1. 安裝相關套件：
-  此Demo是使用python 3.11.9版本，進入此Demo目錄，執行<code>
+此Demo是使用python 3.11.9版本，進入此Demo目錄，執行<code>
 python -m venv env  
 source env/bin/activate (Linux/Mac) or .\env\Scripts\activate (Windows)  
-pip install -r requirements.txt  
-</code>
+pip install -r requirements.txt</code>
 2. 創建資料庫：
-   以PostgresSQL創建名為`mydb`的資料庫，並在`mydb`中建立名為`users`的資料表，  
-   <code>
+以PostgresSQL創建名為`mydb`的資料庫，並在`mydb`中建立名為`users`的資料表，  
+<code>
    CREATE TABLE users (  
 	id serial PRIMARY KEY,  
 	username VARCHAR ( 50 ) NOT NULL,  
 	password VARCHAR ( 255 ) NOT NULL,  
 	email VARCHAR ( 50 ) NOT NULL,  
     registered_date DATE  
-);  
-    </code>
+);</code>
 3. 啟動：  
-   <code>
+<code>
    cd backend  
    flask run  
-   </code>
-   首頁會在本地http://127.0.0.1:5000/  中呈現
+</code>
+首頁會在本地http://127.0.0.1:5000/  中呈現
 
 ## API說明
 1. 創建帳號，POST，'/api/users'  
