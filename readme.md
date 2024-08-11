@@ -7,8 +7,7 @@ source env/bin/activate (Linux/Mac) or .\env\Scripts\activate (Windows)
 pip install -r requirements.txt</code>
 2. 創建資料庫：
 以PostgresSQL創建名為`mydb`的資料庫，並在`mydb`中建立名為`users`的資料表，  
-<code>
-   CREATE TABLE users (  
+<code>CREATE TABLE users (  
 	id serial PRIMARY KEY,  
 	username VARCHAR ( 50 ) NOT NULL,  
 	password VARCHAR ( 255 ) NOT NULL,  
