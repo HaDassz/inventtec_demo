@@ -3,11 +3,12 @@
 1. 安裝相關套件：
   此Demo是使用python 3.11.9版本，進入此Demo目錄，執行  
 <code>
+cd flask_demo  
 python -m venv env  
 source env/bin/activate (Linux/Mac) or .\env\Scripts\activate (Windows)  
 pip install -r requirements.txt  
 </code>
-1. 創建資料庫：
+2. 創建資料庫：
    以PostgresSQL創建名為`mydb`的資料庫，並在`mydb`中建立名為`users`的資料表，  
    <code>
    CREATE TABLE users (  
@@ -18,17 +19,14 @@ pip install -r requirements.txt
     registered_date DATE  
 );  
     </code>
-1. 啟動：  
+3. 啟動：  
    <code>
    cd backend  
    flask run  
-   </code>
-   首頁會在本地http://127.0.0.1:5000/  中呈現
-
+</code>首頁會在本地http://127.0.0.1:5000/  中呈現
 ## API說明
-1. 創建帳號，POST，'/api/users'  
-   request json:  
-   <code>
+1. 創建帳號，POST，'/api/users'
+   request json:<code>
     {  
     "email": "xxx@xxx.xxx",  
     "password": "xxx",  
@@ -38,8 +36,7 @@ pip install -r requirements.txt
    response:  
        檢查是否重複及確認資料皆合法後，回傳創建成功訊息  
 2. 用API登入，POST，'/api/login/'  
-   request json:  
-   <code>
+   request json:<code>
     {  
     "email": "xxx@xxx.xxx",  
     "password": "xxx"  
@@ -54,8 +51,7 @@ pip install -r requirements.txt
    要是登入狀態才能查詢，user_id 的type是integer，已登入的話會得到`user_id`該`id`的資料  
 5. 更新特定帳號的資料，PUT，'/api/users/{user_id}'  
    要是登入狀態才能更新，user_id 的type是integer  
-   request json:  
-   <code>
+   request json:<code>
     {  
     "new_username": "xxx",  
     "new_password": "xxxx",  
