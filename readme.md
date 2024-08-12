@@ -6,8 +6,9 @@
 cd flask_demo
 python -m venv env
 source env/bin/activate (Linux/Mac) or .\env\Scripts\activate (Windows)
-pip install -r requirements.txt</code>
-2. 創建資料庫：
+pip install -r requirements.txt
+</code>
+3. 創建資料庫：
 以PostgresSQL創建名為`mydb`的資料庫，並在`mydb`中建立名為`users`的資料表，
 <code>
 CREATE TABLE users (  
