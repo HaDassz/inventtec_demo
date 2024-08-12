@@ -212,6 +212,9 @@ def update_user_data(user_id):
         if len(new_username) >= 30:
             return {"result":"名字過長!", \
                 "HTTP status":403}
+        elif not re.match(r'[^@]+@[^@]+\.[^@]+', new_email):
+            return {"result":"電子郵件不合規則!", \
+                "HTTP status":403}
         else:
             _hashed_password = generate_password_hash(new_password)
             cursor.execute('UPDATE users SET username = %s, password = %s, email = %s WHERE id = %s', (new_username, _hashed_password, new_email, user_id))
